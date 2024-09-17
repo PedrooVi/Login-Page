@@ -123,40 +123,23 @@ p{
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1000px) {
-
-    body{
-        justify-content: center;
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
     }
 
-    .container{
-        display: grid;
-        grid-template-columns: 1.5fr;
-        font-size: 1.2em;
-     
+    .inputs input {
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .inputs{
-        display: grid;
-        font-size: 1.2em;
+    .btn {
+        padding: 10px;
+        font-size: 14px;
     }
 
-    .inputs input{
-        font-size: 0.8em;
+    .text {
+        font-size: 14px;
     }
-
-
-    .btn{
-        margin-top: 5%;
-        font-size: 0.9em;
-    }
-
-    .container p {
-        font-size: 1.0em;
-    }
-
-    .text a:hover{
-        color: steelblue;
-    }
-
 }
