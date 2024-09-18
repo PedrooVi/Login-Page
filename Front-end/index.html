@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Login</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Faça login</h1>
-        <form action="">
+      <h1>Faça login</h1>
+      <form action="">
+        <div class="inputs">
+          <label for="email">Email</label>
+          <input name="email" type="text" required />
+        </div>
+        <div class="inputs">
+          <label for="password">Senha</label>
+          <input id="senha" name="password" type="password" />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="check" />
+          <label id="label-check" for="check">Mostar senha</label>
+        </div>
+
+        <button class="btn">Fazer login</button>
+        <p class="text">
+          Não possui conta? <a id="btn-registrar" href="#">Registre-se</a>
+        </p>
+      </form>
+    </div>
+
+    <div id="registrar" class="modal oculto">
+      <div class="modal conteudo">
+        <h1>Cadastro</h1>
+         <form action="">
             <div class="inputs">
+                <label for="nome">Nome completo</label>
+                <input name="nome" type="text" required />
+              </div>
+              <div class="inputs">
                 <label for="email">Email</label>
-                <input name="email" type="text" required>
-            </div>
-            <div class="inputs">
+                <input name="email" type="text" required />
+              </div>
+              <div class="inputs">
+                <label for="email">Confirmar email</label>
+                <input name="confirm-email" type="text" required />
+              </div>
+              <div class="inputs">
+                <label for="username">Nome de usuario</label>
+                <input name="username" type="text" required />
+              </div>
+              <div class="inputs">
                 <label for="password">Senha</label>
-                <input id="senha" name="password" type="password">
-            </div>
+                <input id="senha" name="password" type="password" />
+              </div>
+              <div class="inputs">
+                <label for="confirm-password">Confirmar senha</label>
+                <input id="senha" name="confirm-password" type="password" />
+              </div>
+         </form>
 
-            <div class="checkbox">
-                <input type="checkbox" id="check">
-                <label id="label-check" for="check">Mostar senha</label>
-            </div>
-
-            <button class="btn">Fazer login</button>
-            <p class="text">Não possui conta? <a href="register.html">Registre-se</a></p>
-
-        </form>
+        <button class="btn">Criar conta</button>
+        <button id="btn-voltar" class="btn">Voltar</button> 
+      </div>
     </div>
 
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>
