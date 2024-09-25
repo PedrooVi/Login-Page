@@ -34,4 +34,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     btnVoltar.addEventListener('click', voltarParaLogin);
+
+    function verificarDados() {
+        let cxRegistro = document.getElementById('register-email');
+        let cxRegistroValor = cxRegistro.value; 
+        
+        let cxConfirmarEmail = document.getElementById('confirm-email');
+        let cxConfirmarEmailValor = cxConfirmarEmail.value;
+
+        let cxRegistroSenha = document.getElementById('password-register');
+        let cxcxRegistroSenhaValor = cxRegistroSenha.value;
+
+        let cxConfirmarSenha = document.getElementById('password-confirm');
+        let cxConfirmarSenhaValor = cxConfirmarSenha.value;
+
+        if (cxRegistroValor != cxConfirmarEmailValor && cxcxRegistroSenhaValor != cxConfirmarSenhaValor ){
+            alert("Os dados inseridos não conferem")
+        }
+         else if(cxRegistroValor != cxConfirmarEmailValor) {
+            alert("Os emails não conferem!")
+        } else if(cxcxRegistroSenhaValor != cxConfirmarSenhaValor) {
+            alert("As senhas não conferem!")
+        }
+    }
+    
+    let btnCadastrar = document.getElementById('btn-cadastrar');
+    btnCadastrar.addEventListener('click', verificarDados);
 });
